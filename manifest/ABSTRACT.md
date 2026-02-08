@@ -55,7 +55,7 @@ O protocolo incentiva a exibição de um **Fair Trade Breakdown** para o consumi
 ## 4. Visão 2026
 
 - **Restaurantes** com agentes que gerenciam canais e escolhem frota própria ou terceirizada de forma dinâmica.
-- **Entregadores** com agentes que otimizam ganho e segurança e recusam automaticamente corridas abusivas.
+- **Entregadores** com agentes pessoais (moltbot/clawdbot) que otimizam ganho e segurança, recusam automaticamente corridas abusivas e, na mesma base de identidade e protocolo, ajudam em necessidades vitais (compras, manutenção). Ver [Visão: agente pessoal do entregador](./VISAO_AGENTE_PESSOAL_ENTREGADOR.md).
 - **Clientes** vendo o custo real da logística e podendo escolher pagar por condições justas.
 - **Infraestrutura urbana** (lockers, robôs de portaria) integrada via protocolo de Handoff.
 

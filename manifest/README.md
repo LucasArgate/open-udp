@@ -27,6 +27,7 @@ Este manifesto contém a especificação completa: arquitetura (Broadcast–Bid�
 
 - [Abstract](./ABSTRACT.md) — Manifesto fundador (PT)
 - [Abstract](./ABSTRACT.en.md) — Founding manifesto (EN)
+- [Visão: agente pessoal do entregador](./VISAO_AGENTE_PESSOAL_ENTREGADOR.md) — Motoboy, moltbot/clawdbot, necessidades vitais e tendência agêntica
 - [Executive Summary](./EXECUTIVE_SUMMARY.md) — Para decisores (CEOs): resiliência operacional e desrisco jurídico
 
 ### Especificações técnicas

@@ -55,7 +55,7 @@ The protocol encourages displaying a **Fair Trade Breakdown** to the consumer: b
 ## 4. Vision 2026
 
 - **Restaurants** with agents that manage channels and choose own fleet or outsourced dynamically.
-- **Couriers** with agents that optimize earnings and safety and automatically decline abusive jobs.
+- **Couriers** with personal agents (moltbot/clawdbot) that optimize earnings and safety, automatically decline abusive jobs, and—on the same identity and protocol base—help with vital needs (purchases, maintenance). See [Vision: courier's personal agent](./VISAO_AGENTE_PESSOAL_ENTREGADOR.md) (PT).
 - **Customers** seeing the real cost of logistics and able to choose to pay for fair conditions.
 - **Urban infrastructure** (lockers, lobby robots) integrated via Handoff protocol.
 

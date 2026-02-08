@@ -39,6 +39,7 @@ Toda a especificação está em [`manifest/`](./manifest/):
 
 - [Abstract](./manifest/ABSTRACT.md) — Manifesto fundador (PT)
 - [Abstract](./manifest/ABSTRACT.en.md) — Founding manifesto (EN)
+- [Visão: agente pessoal do entregador](./manifest/VISAO_AGENTE_PESSOAL_ENTREGADOR.md) — Motoboy, moltbot/clawdbot, necessidades vitais e tendência agêntica
 - [Executive Summary](./manifest/EXECUTIVE_SUMMARY.md) — Operational resilience & legal de-risking (CEOs)
 
 ### Especificações técnicas
