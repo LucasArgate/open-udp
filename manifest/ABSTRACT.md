@@ -12,7 +12,11 @@
 
 O **Universal Delivery Protocol (UDP)** é um padrão aberto de protocolo para logística **Last Mile** — um **protocolo em si**, não uma extensão. Opera no namespace `u.delivery` e é a **esfera de entrega física** (um hólon autossuficiente e interdependente) da holarquia universal `u.*`, construído **sobre** o [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp) (`u.service`) como base — suas mensagens de negociação trafegam pelo transporte do USP. O UDP move **átomos** (objetos do mundo real de A→B), não bytes; é a ponte físico-digital entre as esferas. Na tendência em que Google e big techs investem em protocolos como o UCP (Universal Commerce Protocol), o futuro é mais protocolos que aplicações; o UDP posiciona-se como um deles. Ele especifica como **Requesters** (quem precisa enviar) e **Providers** (quem entrega) descobrem, negociam e executam entregas em um modelo de **mercado descentralizado** (broadcast + lances), com segurança física e econômica no centro do desenho.
 
+> **O que significa "hólon".** O termo vem de **Arthur Koestler** (*The Ghost in the Machine*, 1967): um **hólon** é, ao mesmo tempo, um **todo completo** (o UDP entrega átomos sozinho, sem precisar de governança) e uma **parte** de um organismo maior (acopla-se ao USP e ao Ledger comum `u.core`). Por isso o UDP é, simultaneamente, **esfera-par** e **ponte físico-digital** — não há contradição: é a natureza holônica. Fundamentação e referências: [Estudo — Hólon e Holarquia](https://github.com/LucasArgate/uhp/blob/main/docs/estudos/holarquia-holon.md).
+
 No modelo atual (apps centralizados), a alocação de corridas é uma caixa preta. O UDP propõe **informação como poder de negociação**: ofertas visíveis, risco precificado, recusa sem punição obscura e reputação portável.
+
+> **Ascensão agêntica — por que agora.** A web está deixando de ser "só visual" para se tornar *executável por intenção*: em junho de 2026 o Chrome abriu o *origin trial* do [**WebMCP**](https://developer.chrome.com/blog/ai-webmcp-origin-trial) (Chrome 149), em que aplicações **declaram ferramentas** para agentes em vez de obrigá-los a adivinhar a interface. O UDP aplica o mesmo princípio ao mundo físico: em vez de o agente do entregador raspar telas de um app, ele invoca **contratos** (`BROADCAST_ORDER`, `SUBMIT_BID`, `AWARD_ORDER`) com semântica clara. Fundamento: [A Web Vai Falar com Agentes](https://www.linkedin.com/pulse/web-vai-falar-com-agentes-o-que-webmcp-muda-para-quem-lucas-argate-vzzif/).
 
 ---
 
@@ -57,9 +61,10 @@ O protocolo incentiva a exibição de um **Fair Trade Breakdown** para o consumi
 ## 4. Visão 2026
 
 - **Restaurantes** com agentes que gerenciam canais e escolhem frota própria ou terceirizada de forma dinâmica.
-- **Entregadores** com agentes pessoais (moltbot/clawdbot) que otimizam ganho e segurança, recusam automaticamente corridas abusivas e, na mesma base de identidade e protocolo, ajudam em necessidades vitais (compras, manutenção). Ver [Visão: agente pessoal do entregador](./VISAO_AGENTE_PESSOAL_ENTREGADOR.md).
+- **Entregadores** com agentes pessoais (Mobolt, o novo OpenClaw) que otimizam ganho e segurança, recusam automaticamente corridas abusivas e, na mesma base de identidade e protocolo, ajudam em necessidades vitais (compras, manutenção). Ver [Visão: agente pessoal do entregador](./VISAO_AGENTE_PESSOAL_ENTREGADOR.md).
 - **Clientes** vendo o custo real da logística e podendo escolher pagar por condições justas.
 - **Infraestrutura urbana** (lockers, robôs de portaria) integrada via protocolo de Handoff.
+- **Saúde (UHP)** como cenário crítico: a esfera [`u.health`](https://github.com/LucasArgate/uhp/tree/main/docs/protocolos/udp.md) usa o UDP para mover **átomos** — medicamentos, vacinas (rede de frio), amostras, soro antiofídico (`urgency_class: CRITICAL`) — com Prova de Entrega criptográfica. É onde a recusa sem punição, o risco explícito e a identidade portável encontram seu teste mais severo.
 
 ---
 

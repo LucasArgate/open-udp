@@ -17,6 +17,8 @@ Enquanto o USP define *como* pedir um serviço, o UDP define *como* esse serviç
 
 > **Posicionamento:** O Open UDP é para a entrega o que o HTTP foi para a web: a **infraestrutura de base** que permite que a concorrência aconteça no serviço, não na conexão. Não é um concorrente de plataformas; é o padrão que desbloqueia interoperabilidade e reduz risco regulatório e operacional.
 
+> 🤖 **Ascensão agêntica:** com o [WebMCP](https://developer.chrome.com/blog/ai-webmcp-origin-trial) (origin trial no Chrome 149, jun/2026) a web passou a **declarar ferramentas** para agentes em vez de deixá-los adivinhar a interface. O UDP é o equivalente disso para o Last Mile: o agente pessoal do entregador (um **Mobolt**, o novo OpenClaw) invoca contratos claros (broadcast/BID/AWARD) em vez de raspar telas. Ver [A Web Vai Falar com Agentes](https://www.linkedin.com/pulse/web-vai-falar-com-agentes-o-que-webmcp-muda-para-quem-lucas-argate-vzzif/).
+
 ### Princípios de fundação
 
 1. **Desacoplamento:** Venda (Restaurante) e Logística (Entregador) são entidades que negociam livremente via broadcast e lances (BID).
@@ -40,7 +42,7 @@ Toda a especificação está em [`manifest/`](./manifest/):
 
 - [Abstract](./manifest/ABSTRACT.md) — Manifesto fundador (PT)
 - [Abstract](./manifest/ABSTRACT.en.md) — Founding manifesto (EN)
-- [Visão: agente pessoal do entregador](./manifest/VISAO_AGENTE_PESSOAL_ENTREGADOR.md) — Motoboy, moltbot/clawdbot, necessidades vitais e tendência agêntica
+- [Visão: agente pessoal do entregador](./manifest/VISAO_AGENTE_PESSOAL_ENTREGADOR.md) — Motoboy, Mobolt (o novo OpenClaw), WebMCP, necessidades vitais e tendência agêntica
 - [Executive Summary](./manifest/EXECUTIVE_SUMMARY.md) — Operational resilience & legal de-risking (CEOs)
 
 ### Especificações técnicas
@@ -97,6 +99,8 @@ Este projeto está sob a licença MIT. Veja [LICENSE](./LICENSE).
 While USP defines *how* to request a service, UDP defines *how* that service physically moves from A to B with **safety**, **fairness**, and **efficiency** — in an open, auditable environment.
 
 > **Positioning:** Open UDP is to delivery what HTTP is to the web: the **base infrastructure** that lets competition happen on service, not on connection. It is not a competitor to platforms; it is the standard that unlocks interoperability and reduces regulatory and operational risk.
+
+> 🤖 **The agentic rise:** with [WebMCP](https://developer.chrome.com/blog/ai-webmcp-origin-trial) (origin trial in Chrome 149, Jun 2026) the web began to **declare tools** for agents instead of letting them guess the interface. UDP is the Last Mile equivalent: the courier's personal agent (a **Mobolt**, the new OpenClaw) invokes clear contracts (broadcast/BID/AWARD) instead of scraping screens.
 
 ### Founding principles
 

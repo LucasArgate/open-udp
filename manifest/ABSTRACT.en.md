@@ -12,7 +12,11 @@
 
 The **Universal Delivery Protocol (UDP)** is an open standard protocol for **Last Mile** logistics — a **protocol in its own right**, not an extension. It operates in the namespace `u.delivery` and is compatible with the [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp) ecosystem. As Google and big techs invest in protocols like UCP (Universal Commerce Protocol), the trend is toward more protocols than applications; UDP is one of them. It specifies how **Requesters** (senders) and **Providers** (couriers) discover, negotiate, and execute deliveries in a **decentralized market** model (broadcast + bids), with physical and economic safety at the center of the design.
 
+> **What "holon" means.** The term comes from **Arthur Koestler** (*The Ghost in the Machine*, 1967): a **holon** is at once a **complete whole** (UDP delivers atoms on its own, without governance) and a **part** of a larger organism (it couples to USP and to the shared `u.core` Ledger). That is why UDP is simultaneously a **peer sphere** and a **physical-digital bridge** — no contradiction: it is the holonic nature. Grounding and references: [Study — Holon and Holarchy](https://github.com/LucasArgate/uhp/blob/main/docs/estudos/holarquia-holon.md) (PT).
+
 In the current model (centralized apps), job allocation is a black box. UDP proposes **information as negotiating power**: visible offers, priced risk, refusal without obscure penalties, and portable reputation.
+
+> **The agentic rise — why now.** The web is ceasing to be "visual only" and becoming *executable by intent*: in June 2026 Chrome opened the [**WebMCP**](https://developer.chrome.com/blog/ai-webmcp-origin-trial) origin trial (Chrome 149), where applications **declare tools** for agents instead of forcing them to guess the interface. UDP applies the same principle to the physical world: instead of the courier's agent scraping an app's screens, it invokes **contracts** (`BROADCAST_ORDER`, `SUBMIT_BID`, `AWARD_ORDER`) with clear semantics.
 
 ---
 
@@ -57,7 +61,7 @@ The protocol encourages displaying a **Fair Trade Breakdown** to the consumer: b
 ## 4. Vision 2026
 
 - **Restaurants** with agents that manage channels and choose own fleet or outsourced dynamically.
-- **Couriers** with personal agents (moltbot/clawdbot) that optimize earnings and safety, automatically decline abusive jobs, and—on the same identity and protocol base—help with vital needs (purchases, maintenance). See [Vision: courier's personal agent](./VISAO_AGENTE_PESSOAL_ENTREGADOR.md) (PT).
+- **Couriers** with personal agents (Mobolt, the new OpenClaw) that optimize earnings and safety, automatically decline abusive jobs, and—on the same identity and protocol base—help with vital needs (purchases, maintenance). See [Vision: courier's personal agent](./VISAO_AGENTE_PESSOAL_ENTREGADOR.md) (PT).
 - **Customers** seeing the real cost of logistics and able to choose to pay for fair conditions.
 - **Urban infrastructure** (lockers, lobby robots) integrated via Handoff protocol.
 

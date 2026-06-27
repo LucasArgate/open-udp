@@ -1,4 +1,4 @@
-# Visão: entregador e agente pessoal (moltbot / clawdbot)
+# Visão: entregador e agente pessoal (Mobolt, o novo OpenClaw)
 
 **Namespace:** `u.delivery` | **Base:** [Open USP](https://github.com/LucasArgate/open-usp)  
 **Relacionado:** [Abstract](./ABSTRACT.md) · [Visão 2026](./ABSTRACT.md#4-visão-2026)
@@ -7,13 +7,15 @@
 
 ## 1. A cena do motoboy
 
-Um motoboy hoje vive no centro da entrega last mile: corre risco físico, depende de ofertas que não controla e de plataformas que retêm reputação e histórico. Em pouco tempo, esse mesmo entregador terá ao lado um **agente pessoal** — um *moltbot* ou *clawdbot* — rodando no seu dispositivo ou no ecossistema em que ele opera.
+Um motoboy hoje vive no centro da entrega last mile: corre risco físico, depende de ofertas que não controla e de plataformas que retêm reputação e histórico. Em pouco tempo, esse mesmo entregador terá ao lado um **agente pessoal** — um *Mobolt* (o novo OpenClaw) ou agente equivalente — rodando no seu dispositivo ou no ecossistema em que ele opera.
 
 Esse agente não é só um “app de corridas”. É um assistente que **compreende o contexto e a realidade** do entregador: onde ele está, que ofertas fazem sentido, que riscos aceitar ou recusar e, para além da entrega, **quais necessidades vitais** ele tem (comprar algo para casa, fazer uma manutenção, resolver um documento). O agente passa a atuar como intermediário inteligente entre o humano e os protocolos agenticos: negocia em nome do entregador, atende demanda de entrega e, na mesma base de confiança e identidade, ajuda a atender necessidades de vida.
 
 ---
 
 ## 2. Tendência agêntica: escalar decisão inteligente
+
+> **Por que isso é tendência, não aposta.** A própria web está virando *executável por intenção*: em junho de 2026 o Chrome abriu o *origin trial* do [**WebMCP**](https://developer.chrome.com/blog/ai-webmcp-origin-trial), em que sites **declaram ferramentas** para agentes em vez de obrigá-los a adivinhar a interface. Se o navegador vira um *runtime* de agentes, a logística precisa de uma linguagem equivalente — e é isso que o UDP entrega para o Last Mile: contratos (broadcast, BID, AWARD, risco explícito) que o agente pessoal do entregador invoca com determinismo, em vez de raspar telas. Fundamento conceitual: [A Web Vai Falar com Agentes](https://www.linkedin.com/pulse/web-vai-falar-com-agentes-o-que-webmcp-muda-para-quem-lucas-argate-vzzif/).
 
 A tendência agêntica não é “mais um chatbot”. É **escalar a capacidade de tomada de decisão inteligente** para quem hoje não tem tempo, informação ou poder de barganha para decidir bem. Para o entregador, isso significa:
 
@@ -47,7 +49,7 @@ O [manifesto do UDP](./ABSTRACT.md) já coloca no centro exatamente as dores que
 | **Autonomia real (agency)** | [Agente Pessoal](ABSTRACT.md#i-autonomia-real-agency) no dispositivo do entregador; recusa sem punição obscura. |
 | **Atender necessidades vitais** | O protocolo aberto e interoperável permite que o agente pessoal dialogue com outros protocolos (ex.: USP, UCP) para compras, manutenção, micro-seguro — na mesma identidade. |
 
-O UDP não é um produto para o motoboy; é a **linguagem em que o agente do motoboy** (moltbot/clawdbot) conversa com a logística e, no futuro, com outros domínios. Assim, o manifesto já fundamenta tanto a entrega justa e segura quanto a extensão do agente para necessidades de vida.
+O UDP não é um produto para o motoboy; é a **linguagem em que o agente do motoboy** (Mobolt, o novo OpenClaw, ou equivalente) conversa com a logística e, no futuro, com outros domínios. Assim, o manifesto já fundamenta tanto a entrega justa e segura quanto a extensão do agente para necessidades de vida.
 
 ---
 
