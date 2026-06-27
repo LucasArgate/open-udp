@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-v0-green.svg)](https://github.com/LucasArgate/open-udp)
 [![Protocol](https://img.shields.io/badge/protocol-Open%20Protocol-blue)](https://github.com/LucasArgate/open-usp)
-[![Namespace](https://img.shields.io/badge/namespace-usp.delivery-blue)](./manifest/)
+[![Namespace](https://img.shields.io/badge/namespace-u.delivery-blue)](./manifest/)
 
 **Language**: [🇧🇷 Português](#-sobre-o-projeto) | [🇺🇸 English](#-about-the-project)
 
@@ -11,7 +11,7 @@
 
 ## 📋 Sobre o Projeto
 
-**Open UDP (Universal Delivery Protocol)** é um **protocolo aberto** para logística **Last Mile** e economia de serviços de delivery. Opera no namespace `usp.delivery` e é compatível com o ecossistema [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp). Na tendência em que Google e big techs investem em protocolos como o UCP (Universal Commerce Protocol), o futuro é mais protocolos que aplicações — o UDP é um deles.
+**Open UDP (Universal Delivery Protocol)** é um **protocolo aberto** para logística **Last Mile** e economia de serviços de delivery. Opera no namespace `u.delivery` e é compatível com o ecossistema [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp). Na tendência em que Google e big techs investem em protocolos como o UCP (Universal Commerce Protocol), o futuro é mais protocolos que aplicações — o UDP é um deles.
 
 Enquanto o USP define *como* pedir um serviço, o UDP define *como* esse serviço se move fisicamente de A para B com **segurança**, **justiça** e **eficiência** — em ambiente aberto e auditável.
 
@@ -23,6 +23,7 @@ Enquanto o USP define *como* pedir um serviço, o UDP define *como* esse serviç
 2. **Safety-by-Design:** Risco físico (clima, área, horário) é variável explícita do protocolo — precificada e monitorada.
 3. **Agentes autônomos:** O entregador atua via Agente Pessoal que analisa ofertas, calcula risco e decide dar lance ou recusar, sem punição obscura.
 4. **Identidade portável:** Reputação e histórico pertencem ao trabalhador (DID), não à plataforma.
+5. **Processo dual (S1/S2):** O agente decide em dois ritmos — S1 (pensar rápido: reflexo de lance e segurança na borda) e S2 (pensar devagar: deliberação, rota, reputação). Segurança nunca espera análise.
 
 ## 🎯 Objetivos
 
@@ -47,7 +48,7 @@ Toda a especificação está em [`manifest/`](./manifest/):
 - [Manifest (visão geral)](./manifest/README.md) — Arquitetura e índice
 - [Especificação técnica](./manifest/specification.md) — Fluxo Broadcast–Bid–Award, estados, exceções
 - [Contratos](./manifest/contracts.md) — Requester, Provider, Observer; termos e obrigações
-- [Mensagens](./manifest/messages.md) — Payloads JSON `usp.delivery`
+- [Mensagens](./manifest/messages.md) — Payloads JSON `u.delivery`
 - [Segurança](./manifest/security.md) — Safety-by-Design, Kill Switch, Proof of Delivery
 - [Extensões](./manifest/extensions.md) — Meta, Risk Premium, handoff, roadmap
 
@@ -77,7 +78,7 @@ open-udp/
 
 1. Leia o [manifest/README.md](./manifest/README.md) e a [especificação](./manifest/specification.md).
 2. Abra issues e PRs para melhorias de texto, schemas ou novos casos de uso.
-3. Respeite o namespace `usp.delivery` e a compatibilidade com [Open USP](https://github.com/LucasArgate/open-usp).
+3. Respeite o namespace `u.delivery` e a compatibilidade com [Open USP](https://github.com/LucasArgate/open-usp).
 
 ## 📄 Licença
 
@@ -91,7 +92,7 @@ Este projeto está sob a licença MIT. Veja [LICENSE](./LICENSE).
 
 ## 🌐 About the Project
 
-**Open UDP (Universal Delivery Protocol)** is an **open protocol** for **Last Mile** logistics and the delivery service economy. It operates under the namespace `usp.delivery` and is compatible with the [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp) ecosystem. As Google and big techs invest in protocols like UCP (Universal Commerce Protocol), the trend is toward more protocols than applications — UDP is one of them.
+**Open UDP (Universal Delivery Protocol)** is an **open protocol** for **Last Mile** logistics and the delivery service economy. It operates under the namespace `u.delivery` and is compatible with the [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp) ecosystem. As Google and big techs invest in protocols like UCP (Universal Commerce Protocol), the trend is toward more protocols than applications — UDP is one of them.
 
 While USP defines *how* to request a service, UDP defines *how* that service physically moves from A to B with **safety**, **fairness**, and **efficiency** — in an open, auditable environment.
 
@@ -103,6 +104,7 @@ While USP defines *how* to request a service, UDP defines *how* that service phy
 2. **Safety-by-Design:** Physical risk (weather, area, time) is an explicit variable of the protocol — priced and monitored.
 3. **Autonomous agents:** The courier acts through a Personal Agent that analyzes offers, computes risk, and decides to bid or decline, without obscure penalties.
 4. **Portable identity:** Reputation and history belong to the worker (DID), not to the platform.
+5. **Dual process (S1/S2):** The agent decides at two speeds — S1 (thinking fast: bid and safety reflexes at the edge) and S2 (thinking slow: deliberation, routing, reputation). Safety never waits for analysis.
 
 ## 🎯 Goals
 

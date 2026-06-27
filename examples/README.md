@@ -1,6 +1,6 @@
 # Open UDP — Exemplos
 
-Esta pasta destina-se a exemplos de implementação e uso do protocolo Open UDP (`usp.delivery`).
+Esta pasta destina-se a exemplos de implementação e uso do protocolo Open UDP (`u.delivery`).
 
 ## Estrutura planejada
 

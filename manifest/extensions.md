@@ -1,6 +1,6 @@
 # Extensões — Open UDP v0.1
 
-**Namespace:** `usp.delivery`
+**Namespace:** `u.delivery`
 
 O protocolo Open UDP é extensível por design. Este documento descreve o mecanismo de extensão e exemplos previstos para versões futuras, sem quebrar a base v0.1.
 
@@ -29,7 +29,7 @@ O protocolo Open UDP é extensível por design. Este documento descreve o mecani
 | **Wait-time / estada** | Taxa de espera no pickup: se o Provider reportar ARRIVED_PICKUP e o Requester não validar IN_TRANSIT em X minutos, valor sobe por minuto (contrato). |
 | **Micro-seguro por corrida** | BID pode incluir referência a agente de seguro; fração do valor vai para pool de cobertura; REPORT_INCIDENT pode acionar sinistro automático. |
 | **Return fee / dead leg** | Custo de "volta" quando o destino é zona de baixa demanda; o Provider pode incluir no BID. |
-| **Handoff (usp.delivery.handoff)** | Protocolo para entregador ↔ locker/robô de portaria (depositar pedido e finalizar entrega sem subir ao andar). |
+| **Handoff (u.delivery.handoff)** | Protocolo para entregador ↔ locker/robô de portaria (depositar pedido e finalizar entrega sem subir ao andar). |
 | **Fair Trade Breakdown** | Schema opcional para exibir ao cliente: valor base, prêmio de risco, seguro, total para o entregador. |
 | **Governança / fundo mútuo** | Pequena taxa por transação para fundo por região (ex.: DAO de entregadores) para casos não cobertos pelo seguro padrão. |
 

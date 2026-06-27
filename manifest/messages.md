@@ -1,6 +1,6 @@
 # Mensagens e Schemas (JSON) — Open UDP v0.1
 
-**Namespace:** `usp.delivery`
+**Namespace:** `u.delivery`
 
 Este documento define os payloads JSON padrão para comunicação entre **Requester** e **Provider** no protocolo Open UDP. Todos os tipos de mensagem incluem `type` e identificadores de ordem/ator conforme abaixo.
 

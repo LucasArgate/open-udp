@@ -2,14 +2,14 @@
 
 **Language**: [🇧🇷 Português](#1-visão-geral) | [🇺🇸 English](#1-overview)
 
-**Namespace:** `usp.delivery`  
+**Namespace:** `u.delivery`  
 **Base:** [Open USP — Specification](https://github.com/LucasArgate/open-usp/blob/main/manifest/specification.md)
 
 ---
 
 ## 1. Visão Geral
 
-Esta especificação define o comportamento de agentes e serviços no protocolo Open UDP (Universal Delivery Protocol), operando sob o namespace `usp.delivery`. O UDP é um **protocolo próprio** para o domínio Last Mile, compatível com o ecossistema Open USP — não uma extensão.
+Esta especificação define o comportamento de agentes e serviços no protocolo Open UDP (Universal Delivery Protocol), operando sob o namespace `u.delivery`. O UDP é um **protocolo próprio** para o domínio Last Mile, compatível com o ecossistema Open USP — não uma extensão.
 
 O Open UDP opera em um modelo de **mercado descentralizado (P2P/Broadcast)** em que **Requesters** publicam intenções de entrega e **Providers** respondem com ofertas (Bids).
 
@@ -58,7 +58,41 @@ O Requester recebe múltiplos BIDs.
 
 ---
 
-## 3. Execução e estados
+## 3. Processo dual (S1/S2): pensar rápido e devagar
+
+Os agentes do UDP (Requester e Provider) operam em **dois modos cognitivos** inspirados na teoria do processo dual de Kahneman (2011): **S1 (pensar rápido)** e **S2 (pensar devagar)**. Diferentemente do UHP — onde S1 e S2 são **camadas/atores distintos** (borda vs. núcleo) — no UDP os dois modos **coexistem no mesmo Agente Pessoal**, no mesmo dispositivo de borda. Não é onde o agente roda, é **como ele decide**.
+
+| | **S1 — pensar rápido (reflexo)** | **S2 — pensar devagar (deliberação)** |
+|---|---|---|
+| **Função** | Reação em tempo real: filtro local (raio, bateria/combustível), heurística de risco/lucro, lance ou ignorar, reflexos de segurança | Análise: ranking multicritério, seleção do `AWARD_ORDER`, otimização de rota multi-pedido, reputação, disputa, governança |
+| **Quando** | Na chegada do `BROADCAST_ORDER` e durante `IN_TRANSIT` | Antes do `AWARD_ORDER` e fora do caminho crítico |
+| **Risco** | Viés/erro sob pressão, auto-aceite abusivo | Latência (lento demais para um incidente ao vivo) |
+
+### 3.1 Mapeamento ao handshake
+
+| Fase | Modo dominante | Comportamento |
+|------|----------------|---------------|
+| `BROADCAST_ORDER` | S2 (Requester) | Compõe a ordem deliberadamente; pode ser disparada por regra S1 (ex.: gatilho de reposição/estoque). |
+| `SUBMIT_BID` | **S1 (Provider)** | Filtro local + heurística de risco/lucro decidem dar lance ou ignorar em segundos; S2 assessora (Risk Budget, rota multi-pedido). |
+| `AWARD_ORDER` | **S2 (Requester)** | Ranking multicritério e seleção deliberada. Atalho S1 (auto-award) permitido quando lance está abaixo de limiar e a reputação é confiável. |
+| `UPDATE_STATUS` / `REPORT_INCIDENT` | **S1 (Provider)** | Reflexos na borda: marcos de execução e detecção de incidente (ver [security.md](./security.md)). |
+
+### 3.2 Bypass de emergência (S1 preempta S2)
+
+Durante a rota ativa (`IN_TRANSIT`), os **reflexos S1 de segurança** (detecção de incidente, kill switch, geofence) **preemptam** a deliberação S2, com **reporte determinístico posterior**. Nenhuma análise lenta deve ficar no caminho crítico de um incidente físico. Esse princípio espelha o árbitro de emergência do UHP (§6.4), adaptado à segurança física do entregador.
+
+```mermaid
+flowchart LR
+  Broadcast["BROADCAST_ORDER"] --> S1bid["S1: filtro + risco/lucro -> BID ou ignora"]
+  S1bid --> S2rank["S2: ranking multicritério -> AWARD_ORDER"]
+  S2rank --> Exec["Execução IN_TRANSIT"]
+  Exec --> S1reflex["S1 reflexo: incidente / kill switch (preempta S2)"]
+  Exec --> S2opt["S2: otimização de rota, reputação, auditoria"]
+```
+
+---
+
+## 4. Execução e estados
 
 Após o `AWARD_ORDER`, a entrega entra em execução com os seguintes estados:
 
@@ -72,32 +106,32 @@ Após o `AWARD_ORDER`, a entrega entra em execução com os seguintes estados:
 | `CANCELLED` | Cancelado por uma das partes (com penalidade, salvo força maior). |
 | `FROZEN` | Incidente reportado; entrega pausada para tratamento. |
 
-### 3.1 Transições com prova
+### 4.1 Transições com prova
 
 Para evitar fraude, as transições críticas **IN_TRANSIT** e **DELIVERED** devem ser acompanhadas de prova criptográfica (assinatura do restaurante/cliente ou scan de token físico), conforme [security.md](./security.md).
 
 ---
 
-## 4. Tratamento de exceções
+## 5. Tratamento de exceções
 
-### 4.1 Incidentes (Safety)
+### 5.1 Incidentes (Safety)
 
 Se o Provider reportar `REPORT_INCIDENT` (acidente, crime, pane), o estado pode mudar para `FROZEN`.
 
 - A reputação do Provider não é afetada negativamente por incidente legítimo.
 - O pagamento proporcional ao trajeto percorrido deve ser garantido quando houver seguro ou termos acordados.
 
-### 4.2 Atraso excessivo
+### 5.2 Atraso excessivo
 
 Se o Provider exceder o ETA acordado em um percentual definido no contrato, o Requester pode cancelar sem multa e reabrir o broadcast.
 
-### 4.3 Cancelamento
+### 5.3 Cancelamento
 
 Regras de cancelamento e penalidades ficam definidas no contrato (ver [contracts.md](./contracts.md)); o protocolo não impõe um único modelo.
 
 ---
 
-## 5. Extensibilidade
+## 6. Extensibilidade
 
 O protocolo permite extensões via campo `meta`, por exemplo:
 
@@ -109,7 +143,7 @@ Detalhes em [extensions.md](./extensions.md).
 
 ---
 
-## 6. Referências
+## 7. Referências
 
 - [Open USP — Especificação](https://github.com/LucasArgate/open-usp/blob/main/manifest/specification.md)
 - [Open UDP — Segurança](./security.md)

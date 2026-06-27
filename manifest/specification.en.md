@@ -2,14 +2,14 @@
 
 **Language**: [🇧🇷 Português](./specification.md) | [🇺🇸 English](#1-overview)
 
-**Namespace:** `usp.delivery`  
+**Namespace:** `u.delivery`  
 **Base:** [Open USP — Specification](https://github.com/LucasArgate/open-usp/blob/main/manifest/specification.en.md)
 
 ---
 
 ## 1. Overview
 
-This specification defines the behavior of agents and services in the Open UDP (Universal Delivery Protocol), under the namespace `usp.delivery`. UDP is a **protocol in its own right** for the Last Mile delivery domain, compatible with the Open USP ecosystem — not an extension.
+This specification defines the behavior of agents and services in the Open UDP (Universal Delivery Protocol), under the namespace `u.delivery`. UDP is a **protocol in its own right** for the Last Mile delivery domain, compatible with the Open USP ecosystem — not an extension.
 
 Open UDP operates in a **decentralized market (P2P/Broadcast)** model where **Requesters** publish delivery intents and **Providers** respond with bids.
 

@@ -1,7 +1,7 @@
 # Open UDP — Examples
 
 ## Purpose
-Implementation and usage examples for Open UDP (`usp.delivery`). Placeholder for v0.1; examples to be added later.
+Implementation and usage examples for Open UDP (`u.delivery`). Placeholder for v0.1; examples to be added later.
 
 ## Context
 - **basic/** — Minimal flow: BROADCAST_ORDER → SUBMIT_BID → AWARD_ORDER → UPDATE_STATUS (DELIVERED).

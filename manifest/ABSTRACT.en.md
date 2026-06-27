@@ -4,13 +4,13 @@
 
 **Language**: [🇧🇷 Português](./ABSTRACT.md) | [🇺🇸 English](#1-abstract)
 
-**Namespace:** `usp.delivery` | **Base:** [Open USP](https://github.com/LucasArgate/open-usp)
+**Namespace:** `u.delivery` | **Base:** [Open USP](https://github.com/LucasArgate/open-usp)
 
 ---
 
 ## 1. Abstract
 
-The **Universal Delivery Protocol (UDP)** is an open standard protocol for **Last Mile** logistics — a **protocol in its own right**, not an extension. It operates in the namespace `usp.delivery` and is compatible with the [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp) ecosystem. As Google and big techs invest in protocols like UCP (Universal Commerce Protocol), the trend is toward more protocols than applications; UDP is one of them. It specifies how **Requesters** (senders) and **Providers** (couriers) discover, negotiate, and execute deliveries in a **decentralized market** model (broadcast + bids), with physical and economic safety at the center of the design.
+The **Universal Delivery Protocol (UDP)** is an open standard protocol for **Last Mile** logistics — a **protocol in its own right**, not an extension. It operates in the namespace `u.delivery` and is compatible with the [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp) ecosystem. As Google and big techs invest in protocols like UCP (Universal Commerce Protocol), the trend is toward more protocols than applications; UDP is one of them. It specifies how **Requesters** (senders) and **Providers** (couriers) discover, negotiate, and execute deliveries in a **decentralized market** model (broadcast + bids), with physical and economic safety at the center of the design.
 
 In the current model (centralized apps), job allocation is a black box. UDP proposes **information as negotiating power**: visible offers, priced risk, refusal without obscure penalties, and portable reputation.
 
@@ -37,6 +37,8 @@ The courier acts through a **Personal Agent** (on their device). This agent:
 - Decides to bid (BID) or ignore.
 
 If they ignore, there is no obscure negative score. It is supply and demand.
+
+This agent decides at **two speeds** (dual-process, inspired by Kahneman): **S1 — thinking fast** (edge reflex: bid/decline in seconds and on-road safety reactions) and **S2 — thinking slow** (deliberation: compare offers, optimize routes, reputation, governance). Safety (S1) never waits for analysis (S2). Technical detail in [specification.md](./specification.md).
 
 ### II. Safety as an economic variable
 

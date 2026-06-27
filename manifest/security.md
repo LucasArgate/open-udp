@@ -1,12 +1,14 @@
 # Open UDP — Security-by-Design
 
-**Namespace:** `usp.delivery`
+**Namespace:** `u.delivery`
 
 O Open UDP foi projetado com a **segurança física do entregador** e a **confiança operacional** do restaurante/cliente como pré-requisitos do protocolo, não como features opcionais.
 
 ---
 
 ## 1. Segurança física do entregador (Safety)
+
+> **Reflexo S1 vs. deliberação S2.** A detecção de anomalia e o kill switch desta seção são **reflexos S1 (pensar rápido)**: agem em milissegundos, na borda, e **preemptam** qualquer deliberação lenta — durante `IN_TRANSIT`, segurança nunca espera análise. Já a estratégia do Risk Budget (§1.2), a política de reputação e a governança são **S2 (pensar devagar)**: deliberadas fora do caminho crítico. Ver [specification.md §3 — Processo dual](./specification.md#3-processo-dual-s1s2-pensar-rápido-e-devagar).
 
 ### 1.1 Kill Switch e detecção de anomalias
 
@@ -25,6 +27,8 @@ O Agente Pessoal do entregador (no smartphone) pode monitorar sensores durante a
 ### 1.2 Risk Budget (orçamento de risco)
 
 O agente do entregador pode manter um "saldo de risco" diário configurável. Cada rota aceita consome pontos com base em horário, clima e histórico de risco do trajeto. Se o risco exceder o saldo, o agente pode recusar o BID ou incluir um **Risk Premium** explícito no lance. O protocolo suporta essa negociação via `risk_assessment` no `SUBMIT_BID`.
+
+A **política** do Risk Budget (limites, apetite de risco, estratégia de sobretaxa) é deliberada em **S2**; a **aplicação** dela na chegada de cada broadcast — aceitar, recusar ou sobretaxar em segundos — é executada em **S1**.
 
 ---
 

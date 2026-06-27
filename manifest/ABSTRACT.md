@@ -4,13 +4,13 @@
 
 **Language**: [🇧🇷 Português](#1-resumo) | [🇺🇸 English](./ABSTRACT.en.md)
 
-**Namespace:** `usp.delivery` | **Base:** [Open USP](https://github.com/LucasArgate/open-usp)
+**Namespace:** `u.delivery` | **Base:** [Open USP](https://github.com/LucasArgate/open-usp)
 
 ---
 
 ## 1. Resumo
 
-O **Universal Delivery Protocol (UDP)** é um padrão aberto de protocolo para logística **Last Mile** — um **protocolo em si**, não uma extensão. Opera no namespace `usp.delivery` e é compatível com o ecossistema [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp). Na tendência em que Google e big techs investem em protocolos como o UCP (Universal Commerce Protocol), o futuro é mais protocolos que aplicações; o UDP posiciona-se como um deles. Ele especifica como **Requesters** (quem precisa enviar) e **Providers** (quem entrega) descobrem, negociam e executam entregas em um modelo de **mercado descentralizado** (broadcast + lances), com segurança física e econômica no centro do desenho.
+O **Universal Delivery Protocol (UDP)** é um padrão aberto de protocolo para logística **Last Mile** — um **protocolo em si**, não uma extensão. Opera no namespace `u.delivery` e é a **esfera de entrega física** (um hólon autossuficiente e interdependente) da holarquia universal `u.*`, construído **sobre** o [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp) (`u.service`) como base — suas mensagens de negociação trafegam pelo transporte do USP. O UDP move **átomos** (objetos do mundo real de A→B), não bytes; é a ponte físico-digital entre as esferas. Na tendência em que Google e big techs investem em protocolos como o UCP (Universal Commerce Protocol), o futuro é mais protocolos que aplicações; o UDP posiciona-se como um deles. Ele especifica como **Requesters** (quem precisa enviar) e **Providers** (quem entrega) descobrem, negociam e executam entregas em um modelo de **mercado descentralizado** (broadcast + lances), com segurança física e econômica no centro do desenho.
 
 No modelo atual (apps centralizados), a alocação de corridas é uma caixa preta. O UDP propõe **informação como poder de negociação**: ofertas visíveis, risco precificado, recusa sem punição obscura e reputação portável.
 
@@ -37,6 +37,8 @@ O entregador atua via **Agente Pessoal** (no seu dispositivo). Esse agente:
 - Decide dar lance (BID) ou ignorar.
 
 Se ignorar, não há score negativo obscuro. É oferta e demanda.
+
+Esse agente decide em **dois ritmos** (processo dual, inspirado em Kahneman): **S1 — pensar rápido** (reflexo na borda: lance/recusa em segundos e reações de segurança na rua) e **S2 — pensar devagar** (deliberação: comparar ofertas, otimizar rota, reputação, governança). A segurança (S1) nunca espera a análise (S2). Detalhe técnico em [specification.md §3](./specification.md#3-processo-dual-s1s2-pensar-rápido-e-devagar).
 
 ### II. Segurança como variável econômica
 

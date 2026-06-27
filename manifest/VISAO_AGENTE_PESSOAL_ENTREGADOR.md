@@ -1,6 +1,6 @@
 # Visão: entregador e agente pessoal (moltbot / clawdbot)
 
-**Namespace:** `usp.delivery` | **Base:** [Open USP](https://github.com/LucasArgate/open-usp)  
+**Namespace:** `u.delivery` | **Base:** [Open USP](https://github.com/LucasArgate/open-usp)  
 **Relacionado:** [Abstract](./ABSTRACT.md) · [Visão 2026](./ABSTRACT.md#4-visão-2026)
 
 ---
@@ -24,7 +24,18 @@ O protocolo que fala “a língua” da entrega (broadcast, BID, AWARD, risco ex
 
 ---
 
-## 3. Como o manifesto UDP endereça essas dores
+## 3. Pensar rápido e devagar (S1/S2) no agente pessoal
+
+"Escalar a tomada de decisão inteligente" tem uma forma concreta: o agente pessoal pensa em **dois ritmos**, inspirados na teoria do processo dual de Kahneman.
+
+- **S1 — pensar rápido (reflexo).** Quando chega uma oferta (broadcast) ou acontece um imprevisto na rua, o agente reage em segundos: filtra se a rota faz sentido (raio, bateria), estima risco e lucro, dá lance ou ignora — e, durante a rota, dispara reflexos de segurança (queda, parada em área de risco → incidente). É a intuição treinada do entregador, agora amplificada e sem cansaço.
+- **S2 — pensar devagar (deliberação).** No tempo certo, fora da pressão, o agente delibera: compara ofertas, otimiza rota de múltiplos pedidos, administra o orçamento de risco, cuida da reputação portável (que vira lastro para crédito) e participa da governança (fundo mútuo). É o planejamento que o humano sozinho raramente tem tempo de fazer.
+
+A chave é que **a segurança nunca espera a deliberação**: um reflexo S1 (kill switch, incidente) sempre tem prioridade sobre a análise lenta de S2, com registro posterior. Diferente do UHP — onde S1 e S2 são camadas separadas (borda e núcleo) — aqui os dois modos vivem **no mesmo agente, no bolso do entregador**. A decisão final continua humana; o agente só garante que ela seja rápida quando precisa ser e bem pensada quando dá tempo.
+
+---
+
+## 4. Como o manifesto UDP endereça essas dores
 
 O [manifesto do UDP](./ABSTRACT.md) já coloca no centro exatamente as dores que essa cena evidencia:
 
@@ -40,7 +51,7 @@ O UDP não é um produto para o motoboy; é a **linguagem em que o agente do mot
 
 ---
 
-## 4. Resumo em uma frase
+## 5. Resumo em uma frase
 
 O entregador terá um agente pessoal que, com base na sua realidade e no contexto, **negocia com os protocolos agenticos**, atende a demanda de entrega e ajuda nas **necessidades vitais** (casa, manutenção, compras), enquanto a **tendência agêntica escala a tomada de decisão inteligente**; o manifesto UDP já assenta essa visão em **autonomia, transparência, risco explícito e identidade portável**.
 

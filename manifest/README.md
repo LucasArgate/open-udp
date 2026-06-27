@@ -2,7 +2,7 @@
 
 **Language**: [🇧🇷 Português](#-visão-geral) | [🇺🇸 English](#-overview)
 
-**Namespace:** `usp.delivery`  
+**Namespace:** `u.delivery`  
 **Version:** 0.1.0  
 **Base protocol:** [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp)
 
@@ -10,7 +10,7 @@
 
 ## 📖 Visão Geral
 
-O **Universal Delivery Protocol (UDP)** é um **protocolo aberto** para logística **Last Mile** que opera no namespace `usp.delivery` e é compatível com o ecossistema [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp). Define como serviços de **entrega Last Mile** são descobertos, negociados e executados entre **Requesters** (quem envia) e **Providers** (quem entrega), com segurança física e econômica como variáveis explícitas do protocolo.
+O **Universal Delivery Protocol (UDP)** é um **protocolo aberto** para logística **Last Mile** que opera no namespace `u.delivery` e é compatível com o ecossistema [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp). Define como serviços de **entrega Last Mile** são descobertos, negociados e executados entre **Requesters** (quem envia) e **Providers** (quem entrega), com segurança física e econômica como variáveis explícitas do protocolo.
 
 Este manifesto contém a especificação completa: arquitetura (Broadcast–Bid–Award), contratos, mensagens JSON, segurança (Safety-by-Design, Kill Switch, Proof of Delivery) e extensões.
 
@@ -19,7 +19,8 @@ Este manifesto contém a especificação completa: arquitetura (Broadcast–Bid�
 1. **Universalidade:** Agnóstico a plataforma e transporte (HTTP, PubSub, DHT, Relay). Contratos e mensagens são o contrato.
 2. **Transparência:** Negociação visível e auditável; sem caixa preta algorítmica na alocação de corridas.
 3. **Segurança primeiro:** Risco físico e digital tratados no desenho (Risk Premium, REPORT_INCIDENT, PoD).
-4. **Extensibilidade:** Campos `meta` e extensões (handoff, micro-seguro, wait-time) sem quebrar a base.
+4. **Processo dual (S1/S2):** Agentes decidem em dois ritmos — reflexo rápido na borda (S1) e deliberação lenta (S2); segurança (S1) preempta análise (S2). Ver [specification.md §3](./specification.md#3-processo-dual-s1s2-pensar-rápido-e-devagar).
+5. **Extensibilidade:** Campos `meta` e extensões (handoff, micro-seguro, wait-time) sem quebrar a base.
 
 ## 📚 Documentação
 
@@ -34,7 +35,7 @@ Este manifesto contém a especificação completa: arquitetura (Broadcast–Bid�
 
 - [Especificação técnica](./specification.md) — Fluxo, atores, estados, exceções
 - [Contratos](./contracts.md) — Requester, Provider, Observer; obrigações
-- [Mensagens](./messages.md) — Payloads `usp.delivery`
+- [Mensagens](./messages.md) — Payloads `u.delivery`
 - [Segurança](./security.md) — Safety-by-Design, Kill Switch, PoD, privacidade
 - [Extensões](./extensions.md) — Meta, handoff, roadmap
 
@@ -70,7 +71,7 @@ Este manifesto contém a especificação completa: arquitetura (Broadcast–Bid�
 
 ## 🌐 Overview
 
-The **Universal Delivery Protocol (UDP)** is an **open protocol** for **Last Mile** logistics that operates in the namespace `usp.delivery` and is compatible with the [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp) ecosystem. It defines how **Last Mile** delivery services are discovered, negotiated, and executed between **Requesters** (senders) and **Providers** (couriers), with physical and economic safety as explicit protocol variables.
+The **Universal Delivery Protocol (UDP)** is an **open protocol** for **Last Mile** logistics that operates in the namespace `u.delivery` and is compatible with the [Open USP (Universal Service Protocol)](https://github.com/LucasArgate/open-usp) ecosystem. It defines how **Last Mile** delivery services are discovered, negotiated, and executed between **Requesters** (senders) and **Providers** (couriers), with physical and economic safety as explicit protocol variables.
 
 This manifest contains the full specification: architecture (Broadcast–Bid–Award), contracts, JSON messages, security (Safety-by-Design, Kill Switch, Proof of Delivery), and extensions.
 
@@ -79,7 +80,8 @@ This manifest contains the full specification: architecture (Broadcast–Bid–A
 1. **Universality:** Platform- and transport-agnostic (HTTP, PubSub, DHT, Relay). Contracts and messages are the contract.
 2. **Transparency:** Negotiation visible and auditable; no algorithmic black box for job allocation.
 3. **Security first:** Physical and digital risk designed in (Risk Premium, REPORT_INCIDENT, PoD).
-4. **Extensibility:** `meta` fields and extensions (handoff, micro-insurance, wait-time) without breaking the base.
+4. **Dual process (S1/S2):** Agents decide at two speeds — fast edge reflex (S1) and slow deliberation (S2); safety (S1) preempts analysis (S2). See [specification.md](./specification.md).
+5. **Extensibility:** `meta` fields and extensions (handoff, micro-insurance, wait-time) without breaking the base.
 
 ## 📚 Documentation
 

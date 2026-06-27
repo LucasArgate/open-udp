@@ -1,8 +1,10 @@
 # Contratos — Open UDP v0.1
 
-**Namespace:** `usp.delivery`
+**Namespace:** `u.delivery`
 
 Este documento define as obrigações e expectativas dos atores do protocolo Open UDP, sem substituir contratos jurídicos específicos entre partes.
+
+> **Modo dual (S1/S2).** As obrigações abaixo são exercidas em dois ritmos cognitivos (ver [specification.md §3](./specification.md#3-processo-dual-s1s2-pensar-rápido-e-devagar)): respostas rápidas na borda — dar lance ou **recusar sem punição obscura**, reportar incidente — são **S1**; decisões deliberadas — seleção do vencedor, ranking, tratamento de disputa, auditoria do Observer — são **S2**.
 
 ---
 
